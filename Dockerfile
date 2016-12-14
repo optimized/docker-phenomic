@@ -8,7 +8,8 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /srv
 VOLUME /srv
 
-RUN npm install phenomic \
+RUN cd /srv \
+    && npm install phenomic \
     && npm install
 
 ENV LC_ALL=C.UTF-8 \
