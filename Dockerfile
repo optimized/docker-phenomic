@@ -5,11 +5,11 @@ RUN apt-get update && apt-get install -y \
     && curl -sL https://deb.nodesource.com/setup_6.x | bash /dev/stdin \
     && apt-get install -y nodejs
 
-RUN npm install -g phenomic \
-    && npm install
-
 WORKDIR /srv
 VOLUME /srv
+
+RUN npm install phenomic \
+    && npm install
 
 ENV LC_ALL=C.UTF-8 \
     LANG=en_US.UTF-8 \
