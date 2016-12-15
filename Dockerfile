@@ -16,7 +16,4 @@ ENV LC_ALL=C.UTF-8 \
 WORKDIR /srv
 VOLUME /srv
 
-COPY entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
-
 CMD ["npm start"]
