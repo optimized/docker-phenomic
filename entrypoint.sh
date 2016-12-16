@@ -1,9 +1,8 @@
 #!/bin/bash
 set -e
 
-npm install phenomic
-
-if [ ! -f /srv/package.json ] then
+if grep -F "phenomic start" package.json 
+then
 ./node_modules/.bin/phenomic setup
 fi
 
